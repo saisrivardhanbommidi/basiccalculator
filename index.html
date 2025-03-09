@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- The root element of the HTML document, with the language set to English -->
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- The head section contains meta-information about the document -->
+        <meta charset="UTF-8"> <!-- Specifies the character encoding for the document (UTF-8 is widely used) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive by setting the viewport width to the device's width -->
         <title>Basic Calculator</title>
+        <!-- The title of the document, which appears in the browser tab -->
         <link rel="stylesheet" href="style.css">
+        <!-- Links an external CSS file (style.css) to style the calculator -->
     </head>
     <body>
+        <!-- The body section contains the content of the document -->
         <div class="calculator">
-            <input type ="text" id="display" disabled>
+            <!-- A container div for the calculator -->
+            <input type="text" id="display" disabled>
+            <!-- An input field to display the current value or result. It is disabled to prevent manual input -->
+            
             <div class="buttons">
+                <!-- A container div for all the calculator buttons -->
+                
+                <!-- Button to clear the display -->
                 <button onclick="cleardisplay()">C</button>
+                
+                <!-- Buttons for operators: division, percentage, and delete last character -->
                 <button onclick="appendOperator('/')">/</button>
                 <button onclick="appendOperator('%')">%</button>
                 <button onclick="deleteLast()">DEL</button>
+                
+                <!-- Buttons for numbers 7, 8, 9, and the multiplication operator -->
                 <button onclick="appendNumber('7')">7</button>
                 <button onclick="appendNumber('8')">8</button>
                 <button onclick="appendNumber('9')">9</button>
                 <button onclick="appendOperator('*')">X</button>
+                
+                <!-- Buttons for numbers 4, 5, 6, and the subtraction operator -->
                 <button onclick="appendNumber('4')">4</button>
                 <button onclick="appendNumber('5')">5</button>
                 <button onclick="appendNumber('6')">6</button>
                 <button onclick="appendOperator('-')">-</button>
+                
+                <!-- Buttons for numbers 1, 2, 3, and the addition operator -->
                 <button onclick="appendNumber('1')">1</button>
                 <button onclick="appendNumber('2')">2</button>
                 <button onclick="appendNumber('3')">3</button>
-                <button onclick="appendOperator('+')">+</button>   
+                <button onclick="appendOperator('+')">+</button>
+                
+                <!-- Buttons for the decimal point, zero, double zero, and the equals sign -->
                 <button onclick="appendNumber('.')">.</button>
                 <button onclick="appendNumber('0')">0</button>
                 <button onclick="appendNumber('00')">00</button>
                 <button onclick="calculateResult()">=</button>
             </div>
-
         </div>
+        
+        <!-- Links an external JavaScript file (script.js) to handle the calculator's logic -->
         <script src="script.js"></script>
     </body>
-    
 </html>
